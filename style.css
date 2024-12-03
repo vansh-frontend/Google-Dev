@@ -1,0 +1,235 @@
+@font-face {
+    font-family:new;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: new;
+    scroll-behavior: smooth;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap:1vw
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #222;
+    border-radius: 50px;
+    font-weight: 500;
+    color:#111;
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+#nav-part2  h4::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+
+}
+
+nav > img{
+    height: 100px;
+    cursor: pointer;
+}
+
+#nav-part2 h4:hover::after{
+    content: '';
+    bottom: 0;
+    border-radius: 0;
+
+}
+#nav-part2 h4 a{
+    text-decoration: none;
+    color:#111; 
+    z-index: 9;
+    position: relative;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover a{
+    color:#f8f8f8;
+}
+
+/* center */
+#center{
+    /* background-color:orange; */
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #00003c;
+    padding-bottom: 2.5vw;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+
+#center h1{
+    font-size:8vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+/* video */
+#page1 > video{
+    width:97%;
+    border-radius: 30px;
+    margin-top: 4vw;  
+    position: relative;
+}
+
+/* hero shape */
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color:#fe3204;
+    border-top-left-radius:50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top:75vh;
+    filter: blur(20px);
+}
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color:#fe3204;
+    border-top-left-radius:50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background-color:#fe3204;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;  
+    animation-name: anime1;
+    animation-duration:5s;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background-color:linear-gradient(#fe3204,#fe3f0a);
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(25px);
+    animation-name: anime;
+     animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+    from{
+        transform: translate(55%,-5%);
+    }
+    to{
+        transform: translate(10%,10%);
+    }
+}
+
+@keyframes anime1{
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-30%,20%);
+    }
+}
+
+
+/* page2 */
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw  0;
+}
+
+.con{
+ white-space: nowrap;
+ display: inline-block;
+ animation-name: move;
+ animation-duration: 10s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text h1{
+    font-size: 7vw;
+    display: inline-block;
+}
+
+#gola{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fe3f0a;
+    margin: 0.5vw 2vw;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
